@@ -1,0 +1,7 @@
+
+@import 'defaults.scss';
+@import 'queries/base.scss';
+
+@media screen and (min-width: 1020px) {
+  @import 'queries/1020.scss';
+}

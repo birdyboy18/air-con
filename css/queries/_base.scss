@@ -1,0 +1,297 @@
+//base styles for everything that isn't width specific
+
+/*================================
+GENERAL SETTINGS
+=================================*/
+
+$base-font-family: "Helvetica Neue", Helvetica, sans-serif;
+$container_max_width: 1020px;
+
+/*================================
+TYPOGRAPHIC SETTINGS
+=================================*/
+
+$base-font-size: 1rem;
+$base-line-height: 1.5rem;
+$measure: 760px; //47.5rem
+
+$h1-font-size: 1rem*1.5*1.5*1.5; //3.375rem
+$h1-line: 1.5rem;
+$h1-lines: 3;
+$h1-line-height: $h1-line * $h1-lines;
+$h1-margin-top: 2 * $h1-line;
+$h1-margin-bottom: 1 * $h1-line;
+
+$h2-font-size: 1rem*1.5*1.5;
+$h2-line: 1.5rem;
+$h2-lines: 2;
+$h2-line-height: $h2-line * $h2-lines;
+$h2-margin-top: 2 * $h2-line;
+$h2-margin-bottom: 1 * $h2-line;
+
+$h3-font-size: 1rem*1.5;
+$h3-line: 1.5rem;
+$h3-lines: 1.5;
+$h3-line-height: $h3-line * $h3-lines;
+$h3-margin-top: 1 * $h3-line;
+$h3-margin-bottom: 1 * $h3-line;
+
+$h4-font-size: 1rem;
+$h4-line: 1.5rem;
+$h4-lines: 1;
+$h4-line-height: $h4-line * $h4-lines;
+$h4-margin-top: 1 * $h4-line;
+$h4-margin-bottom: 1 * $h4-line;
+
+/*================================
+TINY RESET
+=================================*/
+
+* {
+  @include border-box();
+}
+
+html, body {
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+  height: 100%;
+  width: 100%;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+}
+
+body {
+  font-family: $base-font-family;
+}
+
+/*================================
+TYPOGRAPHY
+=================================*/
+
+.h1 {
+  padding: 0 0 0 0;
+  font-size: $h1-font-size;
+  line-height: $h1-line-height;
+  margin: $h1-margin-top 0 $h1-margin-bottom 0;
+}
+
+.h2 {
+  padding: 0 0 0 0;
+  font-size: $h2-font-size;
+  line-height: $h2-line-height;
+  margin: $h2-margin-top 0 $h2-margin-bottom 0;
+}
+
+.h3 {
+  padding: 0 0 0 0;
+  font-size: $h3-font-size;
+  line-height: $h3-line-height;
+  margin: $h3-margin-top 0 $h3-margin-bottom 0;
+}
+
+.h4 {
+  padding: 0 0 0 0;
+  font-size: $h4-font-size;
+  line-height: $h4-line-height;
+  margin: $h4-margin-top 0 $h4-margin-bottom 0;
+}
+
+p, ul {
+  padding: 0 0 0 0;
+  margin: $h4-margin-top 0 $h4-margin-bottom 0;
+  font-size: 1rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+img, iframe {
+  max-width: 100%;
+}
+
+img {
+  width: auto;
+  height:auto;
+}
+
+/*================================
+SIZE PRIMITIVES & BLOCKS
+=================================*/
+
+.container {
+  width: 100%;
+  max-width: $container_max_width;
+  margin: 0 auto 0 auto;
+  @include clearfix();
+  padding: 0 1.25rem;
+}
+
+.full {
+  width: columns(12);
+}
+
+.half {
+  width: columns(12);
+}
+
+.third {
+  width: columns(12);
+}
+
+.quarter {
+  width: columns(12);
+}
+
+//Used to contain images
+.media-holder {
+  text-align:center;
+}
+
+img {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
+
+/*================================
+LAYOUT HELPERS
+=================================*/
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.cf {
+  @include clearfix();
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.push-down {
+  margin-top: 60px;
+}
+
+/*================================
+MAIN STYLES
+=================================*/
+
+.header {
+  padding: 1.25rem 0;
+  background: #333333;
+}
+
+.logo {
+  width: 150px;
+  margin-right: 10px;
+}
+
+.tag-line {
+  color: #ffffff;
+  font-size: .75rem;
+  margin-top: 25px;
+  display:block
+}
+
+.product-img {
+  min-height: 400px;
+  position: relative;
+
+  img {
+    position: absolute;
+    top:50%;
+    left:50%;
+  }
+}
+
+.img-centered {
+  transform: translate(-50%, -50%);
+}
+
+.img-absolute {
+  margin: auto;
+  top:0 !important;
+  right:0;
+  bottom:0;
+  left:0 !important;
+}
+
+.product {
+  padding: 60px 0;
+}
+
+.sub-desc {
+  font-size: .875rem;
+  color: #666;
+}
+
+.freebie-box {
+ width: 100%;
+ margin: 0 auto 0 auto;
+ padding: 60px 1.25rem;
+ max-width: $container_max_width;
+ background: #eee;
+}
+
+.freebie {
+  background: #ccc;
+  text-align: center;
+  //vertical-align: middle;
+}
+
+.travolta {
+  width: 300px;
+  height: 400px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: all 0.5s;
+  margin: 0 auto 0 auto;
+
+  &:hover {
+    transform: rotateY(180deg);
+  }
+}
+
+.front {
+  position: absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  height:100%;
+  font-size: 4rem;
+  line-height: 1.5em;
+  background: red;
+  color: #fff;
+}
+
+.back {
+  position: absolute;
+  top:0;
+  left:0;
+  transform: rotateY(180deg);
+  width: 100%;
+  height:100%;
+  background: green;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
